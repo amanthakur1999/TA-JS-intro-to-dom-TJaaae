@@ -23,6 +23,8 @@ HINT:
 let allHrsArray = Array.from(allHrs)
 */
 
+let allHrsArray =Array.from(allHrs);
+
 // Set the border of the all the hr elements to "1px solid tomato"
 
 allHrs.forEach((num)=>num.style.border= "1px solid tomato")
@@ -49,6 +51,8 @@ let imageClass = document.querySelectorAll(".image");
 imageClass.forEach((num)=>num.style.border=`2px solid purple`)
 
 // Hide the box number 17 (last box).
+
+document.querySelector('.seveenteen').style.display ="none";
 
 // Change the border of all the hr element from solid to dashed type
 
@@ -88,10 +92,28 @@ Do the following after selecting box 16 and storing in variable named box16
 
   - Focus on the difference between element and node
 */
+ let box16 =document.querySelector(".sixteen");
+ console.log(box16.parentElement);
+ console.log(box16.childNodes);
+ console.log(box16.previousSibling);
+ console.log(box16.nextSibling);
+ console.log(box16.firstChild);
+ console.log(box16.lastChild);
 
-// Select box 2 and append a new paragraph element with content "Append inserts as last child" just after hr element.
+ console.log(box16.previousElementSibling);
+ console.log(box16.nextElementSibling);
+ console.log(box16.firstElementChild);
+ console.log(box16.lastElementChild);
+
+ // Select box 2 and append a new paragraph element with content "Append inserts as last child" just after hr element.
 
 // Select box 3 and prepend a new paragraph element with content "Prepend inserts as first child" just before hr element.
+
+let para2 =document.createElement('p')
+para2.innerText ="Prepend inserts as first child"
+
+let box3 =document.querySelector(".three")
+box3.prepend(para2)
 
 // Change the border of box 4 to '1px solid black'
 
@@ -129,8 +151,11 @@ six.classList.add("awesome-box")
 let box =document;
 // Using the toggle classList property toggle the class `awesome-box` from box 2
 
+box2.classList.toggle("awesome-box");
+
 // Using the remove classList proeprty remove the class `awesome-box` from box 4
 
+four.classList.remove("awesome-box");
 // Change the background of the body to bisque
 
 let body =document.body.style.background ="bisque"
@@ -193,6 +218,7 @@ let input = document.createElement("input");
 
 // Change the placeholder property of the input element to "Enter you email!"
 
+input.placeholder ="Enter you email!"
 // Append the input element to the box 5 you selected above
 
 five.append(input)
