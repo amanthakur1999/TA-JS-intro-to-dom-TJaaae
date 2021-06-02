@@ -5,8 +5,15 @@ default value to be "text" and return the input element inside label. (create it
 
 */
 
-// Your code goes here
-
+function createInputElm (lbl ,type="text"){
+  let label =document.createElement("label")
+  label.innerText=lbl
+  let input = document.createElement("input")
+  input.type=type
+  label.append(input)
+  // document.querySelector("body").append(label)
+  return label
+}
 // TEST
 createInputElm('Your name'); //<label>Your name: <input type="text"></label>
 createInputElm('Your age', 'number'); //<label>Your age: <input type="number"></label>
@@ -21,7 +28,16 @@ createInputElm('Your age', 'number'); //<label>Your age: <input type="number"></
 
 // 3. Create a function named `createList` that accept and array of data like ['Mango', 'Apple', 'Banana'] and returns
 // the html for the link like <ul> <li>Mango</li>  <li>Apple</li>  <li>Banana</li> </ul>
-// Your code goes here
+
+function createList(array = []){
+  let ul = document.createElement("ul");
+  array.forEach( fruit => {
+   let li = document.createElement("li");
+    li.innerText = fruit;
+    ul.append(li)
+  })
+  return ul;
+}
 
 // TEST
 createList(['ALABAMA', 'ALASKA', 'HAWAII', 'KENTUCKY']);
@@ -38,8 +54,12 @@ createList(['Afghanistan', 'Antarctica', 'Congo', 'Estonia']);
   </li>
 </ul>
 */
-
-// Your code goes here
+ 
+function createTodoList(array=[]){
+  if(name ==="Learn DOM"){
+return  false
+  }
+}
 
 // TEST
 createTodoList([
