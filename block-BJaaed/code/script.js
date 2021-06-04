@@ -120,7 +120,7 @@ let books=[
 
 
     let box = document.querySelector('.box')
-
+    
 books.forEach(book => {
     let div = document.createElement('div')
     div.classList.add("divOne")
